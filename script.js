@@ -21,6 +21,11 @@ function marcarQuadrado(id) {
     quadrado.innerHTML = jogador
     quadrado.style.color = 'black'
     
+     // ESSA CONDIÇÃO SÓ SERÁ FALSA QUANDO JÁ TIVER UM VENCEDOR
+    if(!vencedor){
+        return checarVencedor()
+    }
+    
     if (jogador == 'x') {
         jogador = 'y'
         document.getElementById('vez').innerHTML = `Vez de: ${jogador}`
@@ -29,10 +34,6 @@ function marcarQuadrado(id) {
         document.getElementById('vez').innerHTML = `Vez de: ${jogador}`
     }
     
-    // ESSA CONDIÇÃO SÓ SERÁ FALSA QUANDO JÁ TIVER UM VENCEDOR
-    if(!vencedor){
-        return checarVencedor()
-    }
 }
 
 function checarVencedor() {
