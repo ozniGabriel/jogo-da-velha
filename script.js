@@ -26,20 +26,16 @@ function marcarQuadrado(id) {
         if(!vencedor){
             checarVencedor()
         }
-        
         jogador = 'y'
-        return document.getElementById('vez').innerHTML = `Vez de: ${jogador}`
         
     } else {
          // ESSA CONDIÇÃO SÓ SERÁ FALSA QUANDO JÁ TIVER UM VENCEDOR
         if(!vencedor){
             checarVencedor()
         }
-        
         jogador = 'x'
-        return document.getElementById('vez').innerHTML = `Vez de: ${jogador}`
     }
-    
+    return document.getElementById('vez').innerHTML = `Vez de: ${jogador}`
 }
 
 function checarVencedor() {
