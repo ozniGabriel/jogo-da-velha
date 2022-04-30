@@ -23,7 +23,7 @@ function marcarQuadrado(id) {
     
      // ESSA CONDIÇÃO SÓ SERÁ FALSA QUANDO JÁ TIVER UM VENCEDOR
     if(!vencedor){
-        return checarVencedor()
+        checarVencedor()
     }
     
     if (jogador == 'x') {
