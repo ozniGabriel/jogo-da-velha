@@ -23,11 +23,11 @@ function marcarQuadrado(id) {
     
     if (jogador == 'x') {
         jogador = 'y'
+        document.getElementById('vez').innerHTML = `Vez de: ${jogador}`
     } else {
         jogador = 'x'
+        document.getElementById('vez').innerHTML = `Vez de: ${jogador}`
     }
-    
-    document.getElementById('vez').innerHTML = `Vez de: ${jogador}`
     
     // ESSA CONDIÇÃO SÓ SERÁ FALSA QUANDO JÁ TIVER UM VENCEDOR
     if(!vencedor){
