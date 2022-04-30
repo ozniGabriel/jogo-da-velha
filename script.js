@@ -21,17 +21,23 @@ function marcarQuadrado(id) {
     quadrado.innerHTML = jogador
     quadrado.style.color = 'black'
     
-     // ESSA CONDIÇÃO SÓ SERÁ FALSA QUANDO JÁ TIVER UM VENCEDOR
-    if(!vencedor){
-        checarVencedor()
-    }
-    
     if (jogador == 'x') {
+        // ESSA CONDIÇÃO SÓ SERÁ FALSA QUANDO JÁ TIVER UM VENCEDOR
+        if(!vencedor){
+            checarVencedor()
+        }
+        
         jogador = 'y'
-        document.getElementById('vez').innerHTML = `Vez de: ${jogador}`
+        return document.getElementById('vez').innerHTML = `Vez de: ${jogador}`
+        
     } else {
+         // ESSA CONDIÇÃO SÓ SERÁ FALSA QUANDO JÁ TIVER UM VENCEDOR
+        if(!vencedor){
+            checarVencedor()
+        }
+        
         jogador = 'x'
-        document.getElementById('vez').innerHTML = `Vez de: ${jogador}`
+        return document.getElementById('vez').innerHTML = `Vez de: ${jogador}`
     }
     
 }
